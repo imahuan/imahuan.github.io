@@ -1,0 +1,131 @@
+# Site Information
+title: Chan
+description: "等我更了解我"
+url: https://imahuan.github.io
+repo: imahuan/imahuan.github.io
+lang: zh-CN
+encoding: utf-8
+timezone: Asia/Shanghai
+
+# Author Information (for SEO and AI crawlers)
+author:
+  name: imahuan
+  email: imahuan0127@gmail.com
+  url: https://imahuan.github.io
+  twitter: imahuan
+  github: imahuan
+
+# Social Media and External URLs
+github: imahuan
+zhihu: imahuan
+twitter: imahuan
+v2ex: imahuan
+menu:
+  #- title: "Weekly"
+  #  url: "https://weekly.imahuan.github.io/"
+  #- title: "GitHub"
+  #  url: "https://github.com/imahuan"
+  #- title: "Twitter"
+  #  url: "https://twitter.com/imahuan"
+  - title: "About"
+    url: "/about.html"
+
+# SEO and Analytics
+#google_analytics: G-KS7EDB6BRM
+
+# Build Settings
+paginate: 10
+post_ext: md
+page_ext: md
+post_layout: post
+page_layout: page
+titlecase: true
+future: true
+highlighter: rouge
+markdown: kramdown
+permalink: /:year-:month-:day/:title.html
+sass:
+  sass_dir: _sass
+  style: compressed
+
+webrick:
+  headers:
+    "Access-Control-Allow-Origin": "*"
+    "Access-Control-Allow-Methods": "GET, OPTIONS"
+    "Access-Control-Allow-Headers": "Content-Type, X-Requested-With"
+
+collections:
+  posts:
+    output: true
+    permalink: /:year-:month-:day/:title.html
+  posts_en:
+    output: true
+    permalink: /en/:year-:month-:day/:title.html
+    sort_by: date
+
+include: [".htaccess", "robots.txt"]
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "node_modules",
+    "SEO_GUIDE.md",
+    "CLAUDE.md",
+  ]
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-pdf-embed
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Sitemap Settings
+defaults:
+  - scope:
+      path: "images/**/*"
+    values:
+      sitemap: false
+  - scope:
+      path: "js/**/*"
+    values:
+      sitemap: false
+  - scope:
+      path: "css/**/*"
+    values:
+      sitemap: false
+  - scope:
+      path: "_sass/**/*"
+    values:
+      sitemap: false
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      sitemap:
+        priority: 0.8
+        changefreq: weekly
+  - scope:
+      path: ""
+      type: "posts_en"
+    values:
+      sitemap:
+        priority: 0.8
+        changefreq: weekly
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      sitemap:
+        priority: 0.6
+        changefreq: monthly
+
+# Custom Site Settings
+showBuyCoffee: false
+payImage: //gw.alipayobjects.com/zos/k/vb/1.png
+assetUrl: //imahuan.github.io/images/
+defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+

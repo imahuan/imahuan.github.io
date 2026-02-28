@@ -1,0 +1,14 @@
+---
+layout: base
+---
+
+{% if page.url contains '/en/' %}
+<!-- English articles: list all articles without pagination -->
+{% assign current_posts = site.posts_en | sort: 'date' | reverse %}
+{% include post-item.html posts=current_posts %}
+{% else %}
+<!-- Chinese articles: maintain original logic including pagination -->
+{% include post-item.html posts=paginator.posts %}
+{% include pagination.html %}
+{% endif %}
+{{ content }}
