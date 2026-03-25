@@ -2,7 +2,7 @@ const CACHE_NAME = "imahuan-cache-v1";
 const FONT_BASE_URL = "https://gw.alipayobjects.com/os/k/jinkai/";
 const IMMUTABLE_ASSETS = [
   "https://gw.alipayobjects.com/os/k/s3/lightense.min.js",
-  "https://gw.alicdn.com/imgextra/i4/O1CN01XYYPwL1uheeXASHIQ_!!6000000006069-2-tps-420-420.png", // Favicon/Logo
+  "https://2.gravatar.com/avatar/92ed4ee998cb83c10bbce4486d951bae3666e59895cefcc0c893530b7a1d8f6b?s=256", // Favicon/Logo
 ];
 
 self.addEventListener("install", (event) => {
