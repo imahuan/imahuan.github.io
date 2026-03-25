@@ -5,15 +5,11 @@ layout: none
 <rss version="2.0"
   xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tw93 Blog</title>
+    <title>Chan Blog</title>
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
     <image>
-      <url>https://gw.alicdn.com/imgextra/i1/O1CN01BjlaXE1auDGoniJGl_!!6000000003389-2-tps-480-444.png</url>
+      <url>https://2.gravatar.com/avatar/92ed4ee998cb83c10bbce4486d951bae3666e59895cefcc0c893530b7a1d8f6b?s=256</url>
     </image>
-    <follow_challenge>
-      <feedId>41147805272531976</feedId>
-      <userId>42909600318350336</userId>
-    </follow_challenge>
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts limit:10 %}
